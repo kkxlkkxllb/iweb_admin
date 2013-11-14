@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -48,12 +48,12 @@ end
 gem 'capistrano'
 gem "rvm-capistrano"
 
-gem 'rails_admin'
+gem 'rails_admin', :git => "https://github.com/anhlhv/rails_admin.git"
 gem "devise"
 gem "slim-rails"
 
 gem 'grape'
 gem 'rack-cors', :require => 'rack/cors'
 
-gem "mongoid", '~> 4', github: 'mongoid/mongoid'
+gem "mongoid", github: 'mongoid/mongoid'
 gem 'garb', :git => 'git://github.com/Sija/garb.git'
