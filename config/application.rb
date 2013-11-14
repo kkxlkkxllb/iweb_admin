@@ -29,7 +29,5 @@ module IwebAdmin
     config.time_zone = 'Beijing'
 
     config.i18n.default_locale = :"zh-cn"
-
-    config.mongoid.include_root_in_json = false
   end
 end

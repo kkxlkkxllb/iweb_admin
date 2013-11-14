@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['Iweb Admin', 'Admin']
+  config.main_app_name = ['Iweb', 'Admin']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
   # config.excluded_models = []
 
   # Include specific models (exclude the others):
-  # config.included_models = []
+  # config.included_models = ["project"]
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]
