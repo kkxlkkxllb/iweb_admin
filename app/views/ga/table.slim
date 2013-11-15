@@ -1,0 +1,11 @@
+tr
+	th= @cate.capitalize
+	th Views
+	th Unique
+	th Time
+- for item in @results
+	tr
+		== render "#{@cate}"
+		td= item.pageviews
+		td= item.unique_pageviews
+		td= item.time_on_page

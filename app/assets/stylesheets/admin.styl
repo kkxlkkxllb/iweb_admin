@@ -1,5 +1,4 @@
-@import "utils"
-$green: #468847
+@import './mixin'
 
 #login_form
 	width: 270px
@@ -8,8 +7,8 @@ $green: #468847
 	margin-top: 50px
 	padding: 20px
 	background: white asset-url('img/back_pattern/back_pattern.png')
-	@include shadow(0,2px,5px,#999,inset)
-	@include round(15px)
-	input[type='email'],input[type='password']
-		width: 200px
+	box-shadow 0 2px 5px #999 inset
+	border-radius 15px
 
+#analytics_options
+	margin-bottom 20px

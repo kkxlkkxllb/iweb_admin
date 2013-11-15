@@ -36,9 +36,15 @@ class Member
 	# field :locked_at,       :type => Time
 	field :role
 
+	has_one :project
+
 	def admin?
 		self.role == "a"
 	end
+
+	def description
+	    email
+	 end
 
 	rails_admin do
 		list do

@@ -1,0 +1,22 @@
+header.navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav(role="banner")
+	.container
+		.navbar-header
+			a.navbar-brand(href = @project.url)
+				= @project.name
+		nav.collapse.navbar-collapse.bs-navbar-collapse(role="navigation")
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href="/members/sign_out" data-method="delete" rel="nofollow")
+						span.label= current_member.email
+						span.label.label-danger 登出
+section.container
+	.row
+		.page-header
+			h1 统计
+		.page-content
+			#analytics_options.btn-group
+				button.btn.btn-default(data-cate = "country") Country
+				button.btn.btn-default(data-cate = "browser") Browser
+				button.btn.btn-default(data-cate = "device") Device
+			table#analytics_table.table.table-striped
+

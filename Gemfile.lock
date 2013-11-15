@@ -7,6 +7,14 @@ GIT
       multi_json (>= 1.3)
 
 GIT
+  remote: git://github.com/lucasmazza/ruby-stylus.git
+  revision: 74b148d03222960ae4be1de037b4501fa3ef3d60
+  specs:
+    stylus (1.0.0)
+      execjs
+      stylus-source
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: 32a9ced358ff2f279ccefe0afaa9e0878628b7ff
   specs:
@@ -241,6 +249,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    stylus-source (0.38.0)
     temple (0.6.7)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
@@ -252,7 +261,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (1.3.0)
+    turbolinks (1.3.1)
       coffee-rails
     tzinfo (0.3.38)
     uglifier (2.3.1)
@@ -291,9 +300,9 @@ DEPENDENCIES
   rails_admin!
   rspec-rails (~> 2.10.0)
   rvm-capistrano
-  sass-rails (~> 4.0.0)
   sdoc
   slim-rails
+  stylus!
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
