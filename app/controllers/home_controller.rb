@@ -8,8 +8,11 @@ class HomeController < ApplicationController
 
 	def analytics
 		@project = current_member.project
-		@cate = params[:cate] || "country"
+		@field = @cate = params[:cate]
 		@results = @project.analytics @cate
+		if params[:cate] == "device"
+			@field = "device_category"
+		end
 		render_json 0,"ok",render_to_string(:template => "ga/table",:layout => false)
 	end
 end
