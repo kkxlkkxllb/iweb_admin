@@ -7,6 +7,14 @@ GIT
       multi_json (>= 1.3)
 
 GIT
+  remote: git://github.com/ahoward/mongoid-grid_fs.git
+  revision: 059012a2c2a9e0a5d6e67137752c3e918689c88a
+  specs:
+    mongoid-grid_fs (1.9.0)
+      mime-types (~> 1.19)
+      mongoid (>= 3.0, < 5.0)
+
+GIT
   remote: git://github.com/lucasmazza/ruby-stylus.git
   revision: 74b148d03222960ae4be1de037b4501fa3ef3d60
   specs:
@@ -91,6 +99,14 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+    carrierwave-mongoid (0.6.3)
+      carrierwave (>= 0.8.0, < 0.10.0)
+      mongoid (>= 3.0, < 5.0)
+      mongoid-grid_fs (~> 1.3)
     coercible (0.2.0)
       backports (~> 3.0, >= 3.1.0)
       descendants_tracker (~> 0.0.1)
@@ -285,6 +301,8 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   capistrano
+  carrierwave
+  carrierwave-mongoid
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
@@ -294,6 +312,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mongoid!
+  mongoid-grid_fs!
   quiet_assets
   rack-cors
   rails (= 4.0.0)
