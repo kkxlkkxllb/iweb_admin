@@ -7,6 +7,7 @@ class Project
 	field :web_property_id
 
 	belongs_to :member
+	has_many :categories
 
 	# 'UA-45522621-2'
 	def profile
