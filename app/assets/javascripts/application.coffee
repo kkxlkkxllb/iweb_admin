@@ -10,3 +10,9 @@ $ ->
 		$(@).addClass 'active'
 		$.get "/analytics",cate: cate,(data) ->
 			$("#analytics_table").html data.data
+	# params =
+	# 	name: "kk"
+	# 	email: "kkxlkkxllb@gmail.com"
+	# 	subject: "test"
+	# 	content: "should"
+	# $.post "/api/message", message: params

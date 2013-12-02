@@ -8,6 +8,8 @@ class Project
 
 	belongs_to :member
 	has_many :categories
+	has_many :messages
+	has_many :quotes
 
 	# 'UA-45522621-2'
 	def profile

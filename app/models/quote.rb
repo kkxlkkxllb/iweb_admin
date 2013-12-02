@@ -10,4 +10,6 @@ class Quote
 	field :postcode, type: String
 	field :email, type: String
 	field :tel, type: String
+
+      belongs_to :project
 end

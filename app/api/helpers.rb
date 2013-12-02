@@ -25,4 +25,8 @@ module APIHelpers
 	def current_member
 		warden.user ||  Member.authorize(auth_token)
 	end
+
+    def clean_params(params)
+      ActionController::Parameters.new(params)
+    end
 end
