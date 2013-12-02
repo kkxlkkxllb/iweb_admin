@@ -1,11 +1,15 @@
 IwebAdmin::Application.routes.draw do
 
-	mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-	devise_for :members, :controllers => {
-		:sessions => :sessions
-	}
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  devise_for :members, :controllers => {
+    :sessions => :sessions
+  }
+  mount API => '/'
 
-	get "analytics",:to => "home#analytics"
+  get '/systems/uploads/category/:id/image/:filename', :to => 'categories#image'
+  get "/systems/uploads/product/:id/image/:filename", :to => "products#image"
 
-	root "home#index"
+  get "analytics",:to => "home#analytics"
+
+  root "home#index"
 end

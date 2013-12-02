@@ -1,11 +1,13 @@
 class Member
 	include Mongoid::Document
 	include Mongoid::Timestamps::Short
+      include Concerns::TokenAuthenticatable
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable and :omniauthable
 	devise :database_authenticatable,
 		:recoverable, :rememberable, :trackable, :validatable
 
+	before_save :ensure_authentication_token
 	## Database authenticatable
 	field :email,              :type => String, :default => ""
 	field :encrypted_password, :type => String, :default => ""
@@ -43,8 +45,8 @@ class Member
 	end
 
 	def description
-	    email
-	 end
+		email
+	end
 
 	rails_admin do
 		list do
