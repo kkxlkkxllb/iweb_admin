@@ -10,6 +10,7 @@ class Project
 	has_many :categories
 	has_many :messages
 	has_many :quotes
+	has_many :manuals
 
 	# 'UA-45522621-2'
 	def profile
@@ -28,6 +29,10 @@ class Project
 		else
 			[]
 		end
+	end
+
+	def special_products
+		Product.special.in(category_id: categories.map(&:id))
 	end
 
 	rails_admin do

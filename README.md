@@ -1,1 +1,1 @@
-
+`rails g scaffold ModelName`

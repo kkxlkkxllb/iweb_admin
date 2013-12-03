@@ -17,6 +17,7 @@ class Product
 	field :energy, type: Integer
 
 	belongs_to :category
+	scope :special, -> {where(:special => true)}
 
 	def predo
 		self.special = (special == "0") ? false : true

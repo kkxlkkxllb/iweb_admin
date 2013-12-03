@@ -1,5 +1,7 @@
 IwebAdmin::Application.routes.draw do
 
+  resources :manuals
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :members, :controllers => {
     :sessions => :sessions
